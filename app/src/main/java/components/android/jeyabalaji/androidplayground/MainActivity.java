@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity
         Contact Susila = new Contact("Susila", "902-579-7992");
         contactListInView.add(Susila);
 
+        Contact samuthiravelu = new Contact("Samuthiravelu", "902-579-7991");
+        contactListInView.add(samuthiravelu);
+
         dataAdapter.notifyDataSetChanged();
     }
 }
