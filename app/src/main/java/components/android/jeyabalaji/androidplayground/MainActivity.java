@@ -5,12 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import components.android.jeyabalaji.androidplayground.recyclerview.Adapter;
 import components.android.jeyabalaji.androidplayground.recyclerview.Contact;
+import components.android.jeyabalaji.androidplayground.recyclerview.listener.CardSelectedListener;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -39,6 +42,25 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setAdapter(dataAdapter);
 
         addDataToList();
+
+        recyclerView.addOnItemTouchListener(new CardSelectedListener(
+                getApplicationContext(),
+                recyclerView,
+                new CardSelectedListener.CardSelectAction()
+                {
+                    @Override
+                    public void onClick(View view, int position)
+                    {
+                        Contact selectedContact = contactListInView.get(position);
+                        Toast.makeText(getApplicationContext(), selectedContact.getName(), Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onLongClick(View view, int position)
+                    {
+
+                    }
+                }));
     }
 
     private void addDataToList() {
