@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity
 
         dataAdapter = new Adapter(contactListInView);
 
-        layoutManager = new LinearLayoutManager(getApplicationContext());
+        layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
 
         recyclerView.setItemAnimator(new DefaultItemAnimator());
