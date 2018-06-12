@@ -1,4 +1,4 @@
-package components.android.jeyabalaji.androidplayground;
+package components.android.jeyabalaji.androidplayground.recyclerview;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
+
+import components.android.jeyabalaji.androidplayground.R;
 
 public class Adapter extends RecyclerView.Adapter<ViewHolder>
 {

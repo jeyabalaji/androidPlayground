@@ -9,6 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import components.android.jeyabalaji.androidplayground.recyclerview.Adapter;
+import components.android.jeyabalaji.androidplayground.recyclerview.Contact;
+
 public class MainActivity extends AppCompatActivity
 {
     private RecyclerView recyclerView;

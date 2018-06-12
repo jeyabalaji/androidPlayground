@@ -1,4 +1,4 @@
-package components.android.jeyabalaji.androidplayground;
+package components.android.jeyabalaji.androidplayground.recyclerview;
 
 public class Contact
 {
